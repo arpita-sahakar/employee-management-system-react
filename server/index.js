@@ -1,6 +1,7 @@
-const express = require("express");
-const mongoose = require("mongoose");
-// const contentRoutes = require("./routes/contentRoutes");
+import express from "express";
+import mongoose from "mongoose";
+import employeeRoutes from "./routes.js";
+
 
 
 // const routes = require("./routes");
@@ -44,6 +45,7 @@ app.get("/api/config", (req, res) => {
     success: true,
   });
 });
+app.use("/employee", employeeRoutes)
 
 // Start the API server
 app.listen(PORT, function () {
