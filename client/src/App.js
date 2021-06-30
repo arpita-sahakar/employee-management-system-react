@@ -24,7 +24,7 @@ function App() {
       <Container>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}> <h1>Employees Create & Show</h1></Paper>
+          <Paper className= {classes.paper} className="navPadding" > <h1 className = "header">Employees Create & Show</h1></Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}><EmployeeList /></Paper>
