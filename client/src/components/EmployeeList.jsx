@@ -62,9 +62,6 @@ export default function BasicTable({ employeeList, setEmployeeList }) {
           <TableBody>
             {employeeList.map((employee, i) => (
               <TableRow key={i}>
-                <TableCell component="th" scope="row">
-                  {employee.name}
-                </TableCell>
                 <TableCell align="right">{employee.name}</TableCell>
                 <TableCell align="right">{employee.department}</TableCell>
                 <TableCell align="right">{employee.designation}</TableCell>
