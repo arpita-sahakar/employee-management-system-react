@@ -10,6 +10,7 @@ export const getEmployee = async (req, res) => {
 };
 
 export const createEmployee = async (req, res) => {
+  console.log(req.body);
   try {
     const singleEmployee = await employeeData.create(req.body);
     res.status(201).json(singleEmployee);
@@ -19,6 +20,7 @@ export const createEmployee = async (req, res) => {
 };
 
 export const deleteEmployee = async (req, res) =>{
+  console.log(req.params)
     try {
         const deleteSingleEmployee = await employeeData.deleteOne({_id: req.params.idNo});
         res.send("deleted successfully")
